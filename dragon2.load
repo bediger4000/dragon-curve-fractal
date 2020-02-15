@@ -1,0 +1,5 @@
+unset key
+set term png size 800,550
+set out "dragon2.png"
+pl 'a.pts' with dots title 'f1' lc rgb "red", \
+	'b.pts' with dots title 'f2' lc rgb "blue"
