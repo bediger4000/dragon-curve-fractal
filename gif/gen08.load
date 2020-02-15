@@ -1,0 +1,6 @@
+unset key
+set term gif size 800,550
+set xra [-0.4:1.2]
+set yra [-0.4:0.7]
+set out "d08.gif"
+plot 'a.pts' with points pt 7 ps .5 lc rgb "red", 'b.pts' with points pt 7 ps .5 lc rgb "blue"

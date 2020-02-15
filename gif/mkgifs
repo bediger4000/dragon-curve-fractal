@@ -1,0 +1,40 @@
+#!/bin/bash
+
+for N in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+do
+	echo generation $N
+    ./d2b $N 0 0  > x.pts
+    ./d2b $N 1 0  >> x.pts
+    grep '1$' x.pts | sort | uniq > a.pts
+    grep '2$' x.pts | sort | uniq > b.pts
+	N2=$(printf "%02d" $N)
+	SYMBOL="dots"
+	if (( $N < 17 ))
+	then
+		PS=".5"
+		if (( $N == 13 ))
+		then
+			PS=".2"
+		elif (( $N == 14 ))
+		then
+			PS=".1"
+		elif (( $N == 15 ))
+		then
+			PS=".05"
+		elif (( $N == 16 ))
+		then
+			PS=".025"
+		fi
+		SYMBOL="points pt 7 ps $PS"
+	fi
+cat << ENDLOAD > gen$N2.load
+unset key
+set term gif size 800,550
+set xra [-0.4:1.2]
+set yra [-0.4:0.7]
+set out "d$N2.gif"
+plot 'a.pts' with $SYMBOL lc rgb "red", 'b.pts' with $SYMBOL lc rgb "blue"
+ENDLOAD
+	gnuplot < gen$N2.load
+	rm -f [abx].pts
+done

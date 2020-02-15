@@ -1,0 +1,6 @@
+unset key
+set term gif size 800,550
+set xra [-0.4:1.2]
+set yra [-0.4:0.7]
+set out "d18.gif"
+plot 'a.pts' with dots lc rgb "red", 'b.pts' with dots lc rgb "blue"
