@@ -42,7 +42,20 @@ x and y widths of the Dragon Curve to avoid gnuplot distorting it.
 The plaid effect in the image is a result of mapping floating
 point numbers to integer-indexed pixels. I thought it quite fetching.
 
-## Recreating the fractal
+## Another fractal
+
+I saw some web page that claimed that a dragon
+was composed of 2, self-similar pieces, one echo from
+the `f1(z)` and `f2(z)` results.
+`d2b.go` outputs the two results with a trailing '1' or '0'.
+This allows me to separate the two results, and plot each
+with a different color.
+
+![2-color dragon curve](dragon2.png?raw=true)
+
+Hey, it works!
+
+## Recreating the fractals
 
 You need a Go compiler.
 I did this under Linux, you should too.
