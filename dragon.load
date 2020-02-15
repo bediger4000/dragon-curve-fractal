@@ -1,0 +1,4 @@
+unset key
+set term png size 800,550
+set out "dragon.png"
+pl 'd3.pts' with dots
