@@ -12,8 +12,9 @@ It turns out you can draw the Dragon Curve using an "Iterated
 Function System".
 
 
-   f1(z) = (1 + i)z/2
-   f2(z) = 1 - (1 - i)z/2
+    f1(z) = (1 + i)z/2
+    f2(z) = 1 - (1 - i)z/2
+
 
 In this, z is a complex number, a+bi.
 
