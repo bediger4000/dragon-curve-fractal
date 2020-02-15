@@ -13,8 +13,8 @@ a.pts b.pts: d2b
 	./d2b 20 0 0  > c.pts
 	./d2b 20 1 0  > d.pts
 	cat c.pts d.pts > x.pts
-	grep '1$$' x.pts > a.pts
-	grep '2$$' x.pts > b.pts
+	grep '1$$' x.pts | sort | uniq > a.pts
+	grep '2$$' x.pts | sort | uniq > b.pts
 
 d3: d3.go
 	go build d3.go
