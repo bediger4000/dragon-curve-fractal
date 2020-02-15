@@ -4,10 +4,15 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"path/filepath"
 	"strconv"
 )
 
 func main() {
+	if len(os.Args) == 1 {
+		fmt.Printf("Usage: %s generations real imag [offset x [offset y]]\n", filepath.Base(os.Args[0]))
+		return
+	}
 	generations, err := strconv.Atoi(os.Args[1])
 	if err != nil {
 		log.Fatal(err)
