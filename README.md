@@ -39,6 +39,9 @@ which is about as easy as it gets.
 I did match the pixel width and height of the image to the
 x and y widths of the Dragon Curve to avoid gnuplot distorting it.
 
+The plaid effect in the image is a result of mapping floating
+point numbers to integer-indexed pixels. I thought it quite fetching.
+
 ## Recreating the fractal
 
 You need a Go compiler.
