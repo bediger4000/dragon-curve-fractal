@@ -46,7 +46,7 @@ point numbers to integer-indexed pixels. I thought it quite fetching.
 ## Another fractal
 
 I saw some web page that claimed that a dragon
-was composed of 2, self-similar pieces, one echo from
+was composed of 2, self-similar pieces, one each from
 the `f1(z)` and `f2(z)` results.
 `d2b.go` outputs the two results with a trailing '1' or '0'.
 This allows me to separate the two results, and plot each
@@ -55,6 +55,11 @@ with a different color.
 ![2-color dragon curve](dragon2.png?raw=true)
 
 Hey, it works!
+But why? Each final f1(x) and f2(x) is the result of a number
+of recursive calls each of which puts the x into f1(x), and f2(x),
+and those two values ech get used recursively.
+So a final point is the result of call f1() and f2() on it's
+ancestors many times. Why do they separate out at the any give step?
 
 ## Recreating the fractals
 
