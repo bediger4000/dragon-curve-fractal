@@ -38,3 +38,11 @@ I used [gnuplot](http://www.gnuplot.info/) to do the plotting,
 which is about as easy as it gets.
 I did match the pixel width and height of the image to the
 x and y widths of the Dragon Curve to avoid gnuplot distorting it.
+
+## Recreating the fractal
+
+You need a Go compiler.
+I did this under Linux, you should too.
+To recreate the image:
+
+    $ make
