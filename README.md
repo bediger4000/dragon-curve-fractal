@@ -61,6 +61,13 @@ and those two values ech get used recursively.
 So a final point is the result of call f1() and f2() on it's
 ancestors many times. Why do they separate out at the any give step?
 
+![gradual filling-in of dragon curve](moving.png?raw=true)
+
+The above is 20 generations of refining the IFS.
+There's a glitch where I transition from trying to draw actual
+filled-in circle shaped points to pixels. I can't seem to get rid of it.
+
+
 ## Recreating the fractals
 
 You need a Go compiler.
